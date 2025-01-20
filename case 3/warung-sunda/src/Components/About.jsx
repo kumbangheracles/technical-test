@@ -1,4 +1,7 @@
 import React from "react";
+import Aos from "aos";
+import { useEffect } from "react";
+
 const img = [
   {
     id: 1,
@@ -24,12 +27,20 @@ const img2 = [
   },
 ];
 export default function About() {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+      easing: "ease-in-out",
+      offset: 100,
+      delay: 100,
+    });
+  }, []);
   return (
     <section id="About" className="about">
       <div className="container">
         <div className="about-deskripsi">
-          <h1>About Us</h1>
-          <p>
+          <h1 data-aos="fade-left">About Us</h1>
+          <p data-aos="fade-left">
             At Sundanese Cuisine, we are passionate about sharing the authentic
             flavors and traditions of West Java's rich culinary heritage. Our
             mission is to bring the essence of Sundanese culture to your plate,
@@ -41,7 +52,7 @@ export default function About() {
             Sundanese food culture.
           </p>
         </div>
-        <div className="about-img-wrapper">
+        <div className="about-img-wrapper" data-aos="fade-right">
           {img.map((item) => (
             <div className="about-img" key={item.id}>
               <img src={item.src} alt="about img" />

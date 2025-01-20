@@ -8,6 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .nav {
   position: fixed;
@@ -164,6 +165,8 @@ section {
   .about-img {
     width: 50vh;
     height: 30vh;
+    box-shadow: 0px 2px 4px 0px;
+    padding: 10px;
     img {
       width: 100%;
       height: fit-content;
@@ -175,7 +178,7 @@ section {
 // Menu
 .menu {
   padding: 100px 1rem 1rem 1rem;
-  height: 170vh;
+  height: 210vh;
 
   h1 {
     text-align: center;
@@ -198,6 +201,9 @@ section {
       font-size: 1.3rem;
       letter-spacing: 2px;
       cursor: pointer;
+      padding: 10px;
+      border: 1px solid;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
     }
     span::after {
       content: "";
@@ -219,15 +225,28 @@ section {
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 40px;
 
     .item-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-inline: auto;
+      // border: 2px solid;
+      padding: 1px;
+      width: 54vh;
+      box-shadow: 0px 2px 4px 0px;
+      padding: 10px;
 
       h4 {
         letter-spacing: 3px;
+        padding: 10px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        letter-spacing: 2px;
+        padding: 5px;
       }
       .item-img {
         width: 50vh;
@@ -534,8 +553,10 @@ section {
     .container {
       .about-img-wrapper {
         .about-img {
-          width: 36vh;
+          width: 50vh;
           height: 30vh;
+          // box-shadow: none;
+          padding: 0;
         }
       }
     }
@@ -593,6 +614,7 @@ section {
         .about-img {
           width: 30vh;
           height: auto;
+          padding: 4px;
         }
       }
     }
@@ -622,9 +644,13 @@ section {
     .category-item {
       gap: 10px;
       .item-wrapper {
+        width: 30vh;
+        p {
+          font-size: x-small;
+        }
         .item-img {
-          width: 40vh;
-          height: 30vh;
+          width: 100%;
+          height: auto;
           img {
             height: 30vh;
           }
@@ -652,6 +678,10 @@ section {
   nav {
     gap: 430px;
     width: auto;
+  }
+
+  .menu {
+    height: auto;
   }
 }
 @media (max-width: 940px) {
@@ -687,8 +717,13 @@ section {
         flex-direction: row;
         margin-top: 40px;
         margin-inline: auto;
+        width: 100%;
       }
     }
+  }
+
+  .menu {
+    height: auto;
   }
 
   .contact-wrapper {

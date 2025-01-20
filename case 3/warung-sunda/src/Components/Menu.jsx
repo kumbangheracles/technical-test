@@ -40,6 +40,7 @@ export default function Menu() {
       setIsLoading(false);
     }, 1200);
   }
+
   return (
     <section className="menu" id="Menu">
       <h1>Menu Category</h1>

@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .nav {
@@ -162,6 +163,8 @@ section {
 .about .about-img {
   width: 50vh;
   height: 30vh;
+  box-shadow: 0px 2px 4px 0px;
+  padding: 10px;
 }
 .about .about-img img {
   width: 100%;
@@ -172,7 +175,7 @@ section {
 
 .menu {
   padding: 100px 1rem 1rem 1rem;
-  height: 170vh;
+  height: 210vh;
   /* HTML: <div class="loader"></div> */
 }
 .menu h1 {
@@ -197,6 +200,9 @@ section {
   font-size: 1.3rem;
   letter-spacing: 2px;
   cursor: pointer;
+  padding: 10px;
+  border: 1px solid;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
 .menu .menu-category span::after {
   content: "";
@@ -217,15 +223,27 @@ section {
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 .menu .category-item .item-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-inline: auto;
+  padding: 1px;
+  width: 54vh;
+  box-shadow: 0px 2px 4px 0px;
+  padding: 10px;
 }
 .menu .category-item .item-wrapper h4 {
   letter-spacing: 3px;
+  padding: 10px;
+  text-align: center;
+}
+.menu .category-item .item-wrapper p {
+  text-align: center;
+  letter-spacing: 2px;
+  padding: 5px;
 }
 .menu .category-item .item-wrapper .item-img {
   width: 50vh;
@@ -508,8 +526,9 @@ section {
     font-size: small;
   }
   .about .container .about-img-wrapper .about-img {
-    width: 36vh;
+    width: 50vh;
     height: 30vh;
+    padding: 0;
   }
   .menu {
     height: auto;
@@ -552,6 +571,7 @@ section {
   .about .container .about-img-wrapper .about-img {
     width: 30vh;
     height: auto;
+    padding: 4px;
   }
   .about-deskripsi h1 {
     font-size: smaller;
@@ -576,9 +596,15 @@ section {
   .menu .category-item {
     gap: 10px;
   }
+  .menu .category-item .item-wrapper {
+    width: 30vh;
+  }
+  .menu .category-item .item-wrapper p {
+    font-size: x-small;
+  }
   .menu .category-item .item-wrapper .item-img {
-    width: 40vh;
-    height: 30vh;
+    width: 100%;
+    height: auto;
   }
   .menu .category-item .item-wrapper .item-img img {
     height: 30vh;
@@ -601,6 +627,9 @@ section {
   nav {
     gap: 430px;
     width: auto;
+  }
+  .menu {
+    height: auto;
   }
 }
 @media (max-width: 940px) {
@@ -634,6 +663,10 @@ section {
     flex-direction: row;
     margin-top: 40px;
     margin-inline: auto;
+    width: 100%;
+  }
+  .menu {
+    height: auto;
   }
   .contact-wrapper {
     width: 80%;
